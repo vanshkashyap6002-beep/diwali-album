@@ -1,0 +1,318 @@
+.creator-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(18, 12, 9, 0.78);
+  backdrop-filter: blur(12px);
+  color: #35291f;
+}
+.creator-dialog {
+  width: min(680px, 100%);
+  max-height: calc(100dvh - 48px);
+  overflow: auto;
+  overscroll-behavior: contain;
+  background: #faf4e8;
+  border: 1px solid #cbb58c;
+  border-radius: 12px;
+  box-shadow: 0 28px 100px #0008;
+  font-family: Arial, sans-serif;
+}
+.creator-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 28px;
+  border-bottom: 1px solid #daceba;
+}
+.creator-brand {
+  font-size: 10px;
+  letter-spacing: 0.19em;
+}
+.creator-close {
+  background: none;
+  border: 0;
+  padding: 4px 12px;
+  color: #544533;
+  font-size: 30px;
+  cursor: pointer;
+  min-height: 44px;
+  min-width: 44px;
+}
+.creator-intro {
+  padding: 28px 32px 16px;
+}
+.creator-eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  color: #8b572d;
+  margin: 0 0 12px;
+}
+.creator-intro h2 {
+  font-family: Georgia, serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.15;
+  margin: 0 0 12px;
+}
+.creator-intro h2:focus {
+  outline: none;
+}
+.creator-intro p:last-child {
+  font-size: 12px;
+  line-height: 1.65;
+  color: #756552;
+  max-width: 480px;
+}
+.creator-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  list-style: none;
+  padding: 0 32px;
+  margin: 4px 0 22px;
+  gap: 12px;
+}
+.creator-steps li {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #807565;
+  font-size: 10px;
+  line-height: 1.3;
+}
+.creator-steps li > span:first-child {
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #cabda7;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.creator-steps li[aria-current="step"] {
+  color: #744421;
+}
+.creator-steps li[aria-current="step"] > span:first-child {
+  background: #744421;
+  color: #fff8e8;
+  border-color: #744421;
+}
+.creator-content {
+  padding: 0 32px 24px;
+}
+.creator-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 18px;
+}
+.creator-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 12px;
+  margin-bottom: 18px;
+  min-width: 0;
+}
+.creator-field > span {
+  font-weight: 600;
+  color: #62503b;
+}
+.creator-field input,
+.creator-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 44px;
+  border: 1px solid #cfc0a8;
+  background: #fffaf1;
+  border-radius: 5px;
+  padding: 12px;
+  font:
+    400 14px/1.5 Arial,
+    sans-serif;
+  color: #39291e;
+  resize: vertical;
+}
+.creator-field textarea {
+  min-height: 70px;
+}
+.creator-dialog button:focus-visible,
+.creator-dialog input:focus-visible,
+.creator-dialog textarea:focus-visible {
+  outline: 2px solid #a25d27;
+  outline-offset: 3px;
+}
+.creator-hint {
+  font-size: 12px;
+  line-height: 1.6;
+  color: #776551;
+  margin: 0 0 18px;
+}
+.creator-footer {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 32px;
+  background: #faf4e8;
+  border-top: 1px solid #daceba;
+}
+.creator-footer > span {
+  font-size: 11px;
+  color: #8b7860;
+}
+.creator-primary,
+.creator-secondary {
+  min-height: 44px;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font:
+    500 12px Arial,
+    sans-serif;
+  cursor: pointer;
+}
+.creator-primary {
+  color: #fff6df;
+  background: #714728;
+  border: 1px solid #714728;
+}
+.creator-secondary {
+  background: transparent;
+  color: #6a5038;
+  border: 1px solid #c5b393;
+}
+.creator-dialog button:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+.creator-memories {
+  display: grid;
+  gap: 22px;
+}
+.creator-memory {
+  display: grid;
+  grid-template-columns: 100px minmax(0, 1fr);
+  gap: 16px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #ded1b9;
+}
+.creator-memory img {
+  width: 100%;
+  height: 125px;
+  object-fit: cover;
+  border: 5px solid white;
+  box-sizing: border-box;
+  box-shadow: 0 2px 6px #49301b20;
+}
+.creator-memory .creator-field {
+  margin-bottom: 10px;
+}
+.creator-remove {
+  background: none;
+  border: 0;
+  color: #8b3f2d;
+  font-size: 12px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  padding: 8px 0;
+  min-height: 44px;
+  cursor: pointer;
+}
+.creator-upload {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 68px;
+  border: 1px dashed #aa8760;
+  border-radius: 5px;
+  margin: 20px 0;
+  color: #744421;
+  font-size: 13px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.creator-upload input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.creator-upload:focus-within {
+  outline: 2px solid #a25d27;
+  outline-offset: 3px;
+}
+.creator-sound {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  min-height: 44px;
+  font-size: 12px;
+}
+.creator-sound input {
+  width: 18px;
+  height: 18px;
+  accent-color: #744421;
+}
+.creator-error {
+  padding: 12px;
+  background: #f6e4d8;
+  color: #8c3026;
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.creator-status {
+  font-size: 12px;
+  color: #756552;
+}
+@media (max-width: 520px) {
+  .creator-backdrop {
+    padding: 10px;
+  }
+  .creator-dialog {
+    max-height: calc(100dvh - 20px);
+  }
+  .creator-header {
+    padding: 12px 18px;
+  }
+  .creator-intro {
+    padding: 22px 20px 12px;
+  }
+  .creator-intro h2 {
+    font-size: 28px;
+  }
+  .creator-steps {
+    padding: 0 20px;
+    gap: 6px;
+  }
+  .creator-steps li {
+    font-size: 9px;
+  }
+  .creator-content {
+    padding: 0 20px 20px;
+  }
+  .creator-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .creator-footer {
+    padding: 16px 20px;
+  }
+  .creator-primary,
+  .creator-secondary {
+    padding: 12px;
+  }
+  .creator-memory {
+    grid-template-columns: 72px minmax(0, 1fr);
+    gap: 12px;
+  }
+  .creator-memory img {
+    height: 96px;
+  }
+}
